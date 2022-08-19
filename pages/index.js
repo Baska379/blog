@@ -1,6 +1,9 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-
+import Navbar from "/components/Navbar";
+import Intro from "/components/Intro";
+import ListItem from "/components/ListItem";
+import GridItem from "/components/GridItem";
+import Footer from "/components/Footer";
 export default function Home() {
   return (
     <div className="">
@@ -10,6 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <Intro />
+      <ListItem />
+      <GridItem />
+      <Footer />
     </div>
   );
 }
