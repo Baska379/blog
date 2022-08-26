@@ -4,7 +4,8 @@ import Intro from "/components/Intro";
 import ListItem from "/components/ListItem";
 import GridItem from "/components/GridItem";
 import Footer from "/components/Footer";
-export default function Home() {
+import { getAllPosts } from "/lib/api";
+export default function Home({ posts }) {
   return (
     <div className="">
       <Head>
@@ -15,8 +16,22 @@ export default function Home() {
       <Navbar />
       <Intro />
       <ListItem />
-      <GridItem />
+      <div className="grid">
+        {posts.map((el) => (
+          <GridItem post={el} key={el.title} />
+        ))}
+      </div>
+
       <Footer />
     </div>
   );
 }
+
+export const getStaticProps = async function () {
+  const posts = await getAllPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};

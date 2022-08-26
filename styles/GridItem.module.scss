@@ -13,6 +13,7 @@
     }
   }
   .context {
+    cursor: pointer;
     img {
       width: 100%;
       height: 200px;
@@ -25,19 +26,10 @@
 
 .GridItem {
   display: grid;
-  grid-template-areas: "card card1 card2";
   margin-top: 50px;
-  grid-gap: 20px;
+  width: 100%;
   .Card {
     grid-area: card;
-    @include Cards;
-  }
-  .Card1 {
-    grid-area: card1;
-    @include Cards;
-  }
-  .Card2 {
-    grid-area: card2;
     @include Cards;
   }
 }
