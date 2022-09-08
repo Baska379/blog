@@ -5,9 +5,9 @@ const GridItem = ({ post }) => {
     <div className={css.GridItem}>
       <div className={css.Card}>
         <div className={css.header}>
-          <img src="img1.jpg" alt="" />
+          <img src={post.publisher.picture} alt="" />
           <div>
-            <h3>BaasanSuren</h3>
+            <h3>{post.publisher.title}</h3>
             <p>{post.date}</p>
           </div>
         </div>

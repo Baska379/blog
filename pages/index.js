@@ -6,6 +6,7 @@ import GridItem from "/components/GridItem";
 import Footer from "/components/Footer";
 import { getAllPosts } from "/lib/api";
 export default function Home({ posts }) {
+  console.log(posts);
   return (
     <div className="">
       <Head>
@@ -14,6 +15,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+
       <Intro />
       <ListItem />
       <div className="grid">
